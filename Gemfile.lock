@@ -36,6 +36,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    addressable (2.3.7)
     arel (6.0.0)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
@@ -176,6 +177,9 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
+    swagger-docs (0.1.9)
+      activesupport (>= 3, < 5)
+      rails (>= 3, < 5)
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -186,6 +190,9 @@ GEM
     uglifier (2.7.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    validate_url (1.0.0)
+      activemodel (>= 3.0.0)
+      addressable
     web-console (2.0.0)
       activemodel (~> 4.0)
       binding_of_caller (>= 0.7.2)
@@ -208,6 +215,8 @@ DEPENDENCIES
   simple_form
   sorcery (= 0.9.0)
   spring
+  swagger-docs
   turbolinks
   uglifier (>= 1.3.0)
+  validate_url
   web-console (~> 2.0)

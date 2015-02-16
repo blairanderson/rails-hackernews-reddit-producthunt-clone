@@ -1,0 +1,27 @@
+<div class="row">
+
+  <div class="items-nav" style="float: left; width:50%;">
+    <%= link_to title, items_path %>
+    <%= link_to 'new', items_path(newest: true) %>
+    <% if current_user %>
+      <%= link_to 'submit', new_item_path %>
+      <% if @item && @item.persisted? && @item.user_id == current_user.id %>
+        <%= link_to 'edit', edit_item_path(@item) %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="user-nav" style="float: left; width:50%; text-align: right;">
+    <% if current_user %>
+      <%= link_to current_user.username, current_user  %>
+      <%= link_to 'edit profile', edit_user_path(current_user.id) %>
+      <%= link_to 'logout', :logout, method: :post %>
+    <% else %>
+      <%= link_to 'register', new_user_path %> |
+      <%= link_to 'login', :login %>
+    <% end %>
+  </div>
+
+</div>
+
+

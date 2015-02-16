@@ -1,0 +1,14 @@
+<%= simple_form_for(@item) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :title %>
+  <%= f.input :url, as: :url, label: false, placeholder: "URL" %>
+  <div>or</div>
+  <%= f.input :content, as: :text, label: false, placeholder: "Markdown Description" %>
+  <div>
+    Leave url blank to submit a question for discussion. If there is no url, the text (if any) will appear at the top
+    of the thread.
+  </div>
+
+  <%= f.button :submit %>
+<% end %>

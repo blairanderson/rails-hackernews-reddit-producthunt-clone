@@ -1,0 +1,20 @@
+// Place all the styles related to the items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+li.item {
+  margin-top: 10px;
+
+  small {
+    color: #BBB;
+  }
+
+  a {
+    color: #000000;
+    background-color: #FFFFFF;
+    &:hover {
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+  }
+}
