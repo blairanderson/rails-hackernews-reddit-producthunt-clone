@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root :to => 'items#index'
-  resources :user_sessions
-  resources :users
+  resources :user_sessions, only: [:new, :create, :destroy]
+  resources :users, except: [:index]
   resources :items, except: [:destroy] do
     resources :item_comments
     member do

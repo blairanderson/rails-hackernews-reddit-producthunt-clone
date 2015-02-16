@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RailsHackernewsRedditProducthunt</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="nav">
+  <%= link_to 'Items', items_path %>
+  <% if current_user %>
+    <%= link_to 'New Item', new_item_path %>
+    <% if @item && @item.user_id == current_user.id %>
+      <%= link_to 'Edit', edit_item_path(@item) %>
+    <% end %>
+    <%= link_to 'Edit Profile', edit_user_path(current_user.id) %>
+    <%= link_to 'Logout', :logout, method: :post %>
+  <% else %>
+    <%= link_to 'Register', new_user_path %> |
+    <%= link_to 'Login', :login %>
+  <% end %>
+</div>
+<% if current_user %>
+  <div class="username">
+    <%= current_user.username %>
+  </div>
+<% end %>
+<div>
+  <p id="notice"><%= flash[:notice] %></p>
+
+  <p id="alert"><%= flash[:alert] %></p>
+</div>
+<%= yield %>
+
+</body>
+</html>
