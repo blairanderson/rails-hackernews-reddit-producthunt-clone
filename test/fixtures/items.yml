@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  url: MyString
+  user_id: 1
+  comments_count: 1
+  upvotes_count: 1
+  downvotes_count: 1
+  score: 1
+  rank: 1
+
+two:
+  title: MyString
+  url: MyString
+  user_id: 1
+  comments_count: 1
+  upvotes_count: 1
+  downvotes_count: 1
+  score: 1
+  rank: 1
