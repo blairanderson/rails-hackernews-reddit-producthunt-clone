@@ -14,4 +14,12 @@ module UserItemVotesHelper
       link_to_upvote(item)
     end
   end
+
+  def render_link_to_user(user, options={})
+    if user.disabled?
+      user.username
+    else
+      link_to user.username, user, options
+    end
+  end
 end

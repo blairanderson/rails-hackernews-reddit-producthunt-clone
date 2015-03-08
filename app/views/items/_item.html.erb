@@ -10,7 +10,7 @@
   <small>
     <%= render_votes_for_item(item) %>
     <%= item.score %> points
-    by <%= link_to item.user.username, item.user %> <%= link_to "#{time_ago_in_words(item.created_at)} ago", item %>
+    by <%= render_link_to_user(item.user) %> <%= link_to "#{time_ago_in_words(item.created_at)} ago", item %>
     | <%= link_to "#{item.comments_count} comments", item %>
   </small>
 </li>
