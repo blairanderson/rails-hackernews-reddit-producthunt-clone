@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root :to => 'items#index'
+  mount ActiveApi::Engine => '/aappii'
+
+  root to: 'items#index'
   resources :user_sessions, only: [:new, :create, :destroy]
   resources :users, except: [:index]
   resources :items, except: [:destroy] do

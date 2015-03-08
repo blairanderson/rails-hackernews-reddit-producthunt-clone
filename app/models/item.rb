@@ -17,5 +17,6 @@ class Item < ActiveRecord::Base
 
 
   scope :active, -> { where(disabled: false) }
+  scope :disabled, -> { where(disabled: true) }
   scope :newest, -> { order(score: :desc) }
 end

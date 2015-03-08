@@ -1,3 +1,11 @@
+PATH
+  remote: ../active_api
+  specs:
+    active_api (0.0.1)
+      active_model_serializers
+      rails (~> 4.2.0)
+      will_paginate
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -20,6 +28,8 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.1)
+    active_model_serializers (0.9.3)
+      activemodel (>= 3.2)
     activejob (4.2.0)
       activesupport (= 4.2.0)
       globalid (>= 0.3.0)
@@ -167,7 +177,6 @@ GEM
       bcrypt (~> 3.1)
       oauth (~> 0.4, >= 0.4.4)
       oauth2 (>= 0.8.0)
-    spring (1.3.2)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -198,11 +207,14 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (~> 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    will_paginate (3.0.7)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_api!
+  active_model_serializers
   byebug
   factory_girl_rails
   faker
@@ -214,7 +226,6 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   simple_form
   sorcery (= 0.9.0)
-  spring
   swagger-docs
   turbolinks
   uglifier (>= 1.3.0)
