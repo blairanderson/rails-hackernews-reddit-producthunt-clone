@@ -1,0 +1,178 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000/aappii",
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "apis": {
+  "/items/:item_id/comments(.:format)": {
+    "GET": {
+      "name": "item_comments",
+      "tags": [
+        "comments",
+        "items"
+      ],
+      "summary": "Comment",
+      "description": "{:model=>\"Comment\", :resources=>\"comments\", :parent_resource=>:items, :controller=>\"active_api/nested_active_api\", :action=>\"index\"}"
+    },
+    "POST": {
+      "name": "item_comments",
+      "tags": [
+        "comments",
+        "items"
+      ],
+      "summary": "Comment",
+      "description": "{:model=>\"Comment\", :resources=>\"comments\", :parent_resource=>:items, :controller=>\"active_api/nested_active_api\", :action=>\"create\"}"
+    }
+  },
+  "/items/:item_id/comments/:id(.:format)": {
+    "GET": {
+      "name": "item_comment",
+      "tags": [
+        "comments",
+        "items"
+      ],
+      "summary": "Comment",
+      "description": "{:model=>\"Comment\", :resources=>\"comments\", :parent_resource=>:items, :controller=>\"active_api/nested_active_api\", :action=>\"show\"}"
+    },
+    "PATCH": {
+      "name": "item_comment",
+      "tags": [
+        "comments",
+        "items"
+      ],
+      "summary": "Comment",
+      "description": "{:model=>\"Comment\", :resources=>\"comments\", :parent_resource=>:items, :controller=>\"active_api/nested_active_api\", :action=>\"update\"}"
+    },
+    "PUT": {
+      "name": "item_comment",
+      "tags": [
+        "comments",
+        "items"
+      ],
+      "summary": "Comment",
+      "description": "{:model=>\"Comment\", :resources=>\"comments\", :parent_resource=>:items, :controller=>\"active_api/nested_active_api\", :action=>\"update\"}"
+    },
+    "DELETE": {
+      "name": "item_comment",
+      "tags": [
+        "comments",
+        "items"
+      ],
+      "summary": "Comment",
+      "description": "{:model=>\"Comment\", :resources=>\"comments\", :parent_resource=>:items, :controller=>\"active_api/nested_active_api\", :action=>\"destroy\"}"
+    }
+  },
+  "/items(.:format)": {
+    "GET": {
+      "name": "items",
+      "tags": [
+        "items"
+      ],
+      "summary": "Item",
+      "description": "{:model=>\"Item\", :resources=>\"items\", :controller=>\"active_api/active_api\", :action=>\"index\"}"
+    },
+    "POST": {
+      "name": "items",
+      "tags": [
+        "items"
+      ],
+      "summary": "Item",
+      "description": "{:model=>\"Item\", :resources=>\"items\", :controller=>\"active_api/active_api\", :action=>\"create\"}"
+    }
+  },
+  "/items/:id(.:format)": {
+    "GET": {
+      "name": "item",
+      "tags": [
+        "items"
+      ],
+      "summary": "Item",
+      "description": "{:model=>\"Item\", :resources=>\"items\", :controller=>\"active_api/active_api\", :action=>\"show\"}"
+    },
+    "PATCH": {
+      "name": "item",
+      "tags": [
+        "items"
+      ],
+      "summary": "Item",
+      "description": "{:model=>\"Item\", :resources=>\"items\", :controller=>\"active_api/active_api\", :action=>\"update\"}"
+    },
+    "PUT": {
+      "name": "item",
+      "tags": [
+        "items"
+      ],
+      "summary": "Item",
+      "description": "{:model=>\"Item\", :resources=>\"items\", :controller=>\"active_api/active_api\", :action=>\"update\"}"
+    },
+    "DELETE": {
+      "name": "item",
+      "tags": [
+        "items"
+      ],
+      "summary": "Item",
+      "description": "{:model=>\"Item\", :resources=>\"items\", :controller=>\"active_api/active_api\", :action=>\"destroy\"}"
+    }
+  },
+  "/users(.:format)": {
+    "GET": {
+      "name": "users",
+      "tags": [
+        "users"
+      ],
+      "summary": "User",
+      "description": "{:model=>\"User\", :resources=>\"users\", :serializer=>\"human\", :controller=>\"active_api/active_api\", :action=>\"index\"}"
+    },
+    "POST": {
+      "name": "users",
+      "tags": [
+        "users"
+      ],
+      "summary": "User",
+      "description": "{:model=>\"User\", :resources=>\"users\", :serializer=>\"human\", :controller=>\"active_api/active_api\", :action=>\"create\"}"
+    }
+  },
+  "/users/:id(.:format)": {
+    "GET": {
+      "name": "user",
+      "tags": [
+        "users"
+      ],
+      "summary": "User",
+      "description": "{:model=>\"User\", :resources=>\"users\", :serializer=>\"human\", :controller=>\"active_api/active_api\", :action=>\"show\"}"
+    },
+    "PATCH": {
+      "name": "user",
+      "tags": [
+        "users"
+      ],
+      "summary": "User",
+      "description": "{:model=>\"User\", :resources=>\"users\", :serializer=>\"human\", :controller=>\"active_api/active_api\", :action=>\"update\"}"
+    },
+    "PUT": {
+      "name": "user",
+      "tags": [
+        "users"
+      ],
+      "summary": "User",
+      "description": "{:model=>\"User\", :resources=>\"users\", :serializer=>\"human\", :controller=>\"active_api/active_api\", :action=>\"update\"}"
+    },
+    "DELETE": {
+      "name": "user",
+      "tags": [
+        "users"
+      ],
+      "summary": "User",
+      "description": "{:model=>\"User\", :resources=>\"users\", :serializer=>\"human\", :controller=>\"active_api/active_api\", :action=>\"destroy\"}"
+    }
+  }
+},
+  "info": {
+  "title": "Rails HackerNews-Reddit-ProductHunt Clone.",
+  "description": "StarterKit for a social news/product site.",
+  "termsOfServiceUrl": "http://github.com/blairanderson/active_api",
+  "license": "MIT",
+  "licenseUrl": "http://github.com/blairanderson/active_api/tree/master/LICENSE.md"
+}
+}
