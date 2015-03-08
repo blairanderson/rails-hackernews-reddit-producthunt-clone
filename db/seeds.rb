@@ -15,6 +15,21 @@ admin = User.create({
     admin: true
   })
 
+user = User.create({
+    username: "user",
+    password: "password",
+    password_confirmation: "password",
+    about: "About the Basic user",
+  })
+
+disabled_user = User.create({
+    username: "disabled_user",
+    password: "password",
+    password_confirmation: "password",
+    about: "About the disabled user",
+    disabled: true
+  })
+
 [
   {url: "https://producthunt.com", title: "Product Hunt - Best way to find new products and services"},
   {url: "https://news.ycombinator.com/", title: "Hacker News - fantastic articles about tech"},
@@ -22,6 +37,8 @@ admin = User.create({
   {title: "Reddit - front page of the internet", content: "Here's a content post, which is different than a url post"},
 ].each do |item|
   admin.items.create(item)
+  user.items.create(item)
+  disabled_user.items.create(item)
 end
 
 puts "created admin user with username: 'admin' and password: 'password'"
