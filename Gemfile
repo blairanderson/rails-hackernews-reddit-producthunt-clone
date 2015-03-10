@@ -1,11 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'active_model_serializers'
-if ENV["RAILS_ENV"]=="production"
-  gem 'active_api', github: 'blairanderson/active_api'
-else
-  gem 'active_api', path: '../active_api'
-end
+gem 'active_api', github: 'blairanderson/active_api'
+
 gem 'jquery-rails'
 gem 'pg'
 gem 'rails', '4.2.0'
