@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :items
+  end
+
   root to: 'items#index'
   resources :user_sessions, only: [:new, :create, :destroy]
   resources :users, except: [:index]
