@@ -2,19 +2,7 @@ class ItemsController < ApplicationController
   before_action :require_login, only: [:new, :create, :edit, :update, :toggle]
   before_action :set_item, only: [:show]
   before_action :set_user_item, only: [:edit, :update, :toggle]
-
-  swagger_controller :items, "Item Management"
-
-  swagger_api :index do
-    summary "Fetches all Current items"
-    notes "This lists items"
-    # param :query, :page, :integer, :optional, "Page number"
-    # param :path, :nested_id, :integer, :optional, "Team Id"
-    # response :unauthorized
-    # response :not_acceptable, "The request you made is not acceptable"
-    # response :requested_range_not_satisfiable
-  end
-
+  
   def index
     order = params[:newest] ? {created_at: :desc} : {score: :desc}
 
