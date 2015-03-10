@@ -3,7 +3,7 @@ ActiveApi::Engine.config.route_config = [
     resources: 'items',
     do: [
       {
-        resources: 'comments'
+        resources: 'item_comments',
       }
     ]
   },

@@ -52,3 +52,7 @@ end
 def login_user_post(user, password)
   page.driver.post(user_sessions_url, { username: user, password: password})
 end
+
+def json
+  @json ||= JSON.parse(response.body)
+end
