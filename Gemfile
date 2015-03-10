@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'active_model_serializers'
-gem 'active_api', github: 'blairanderson/active_api'
+# gem 'active_api', github: 'blairanderson/active_api'
 
 gem 'jquery-rails'
 gem 'pg'
