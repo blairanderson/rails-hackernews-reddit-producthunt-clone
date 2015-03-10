@@ -1,4 +1,6 @@
+ruby '2.1.5'
 source 'https://rubygems.org'
+
 
 gem 'active_model_serializers'
 # gem 'active_api', github: 'blairanderson/active_api'
@@ -13,6 +15,9 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'validate_url'
 
+group :production do
+  gem 'rails_12factor'
+end
 
 group :development, :test do
 
