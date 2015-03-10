@@ -3,7 +3,7 @@ class Item < ActiveRecord::Base
   has_many :votes, as: :votable
   has_many :comments, class_name: "ItemComment"
 
-  validates_presence_of :title, allow_blank: false
+  validates :title, presence: true, length: { maximum: 250 }, allow_blank: false, allow_nil: false
 
   validate do
     if content.blank? && url.blank?

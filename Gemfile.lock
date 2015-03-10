@@ -212,6 +212,7 @@ GEM
       bcrypt (~> 3.1)
       oauth (~> 0.4, >= 0.4.4)
       oauth2 (>= 0.8.0)
+    spring (1.3.3)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -266,6 +267,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   simple_form
   sorcery (= 0.9.0)
+  spring
   swagger-docs
   turbolinks
   uglifier (>= 1.3.0)

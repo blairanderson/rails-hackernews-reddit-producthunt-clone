@@ -11,13 +11,7 @@
       {
         "method": "GET",
         "summary": "item_comments",
-        "notes": {
-          "model": "Comment",
-          "resources": "comments",
-          "parent_resource": "items",
-          "controller": "active_api/nested_active_api",
-          "action": "index"
-        },
+        "notes": "{:model=>\"Comment\", :resources=>\"comments\", :parent_resource=>:items, :controller=>\"active_api/nested_active_api\", :action=>\"index\"}",
         "nickname": "item_comments",
         "parameters": [
           {
@@ -32,13 +26,7 @@
       {
         "method": "POST",
         "summary": "item_comments",
-        "notes": {
-          "model": "Comment",
-          "resources": "comments",
-          "parent_resource": "items",
-          "controller": "active_api/nested_active_api",
-          "action": "create"
-        },
+        "notes": "{:model=>\"Comment\", :resources=>\"comments\", :parent_resource=>:items, :controller=>\"active_api/nested_active_api\", :action=>\"create\"}",
         "nickname": "item_comments",
         "parameters": [
           {
@@ -52,20 +40,14 @@
       }
     ],
     "description": "POST : item_comments",
-    "path": "/items/:item_id/comments(.:format)"
+    "path": "/items/:item_id/comments"
   },
   {
     "operations": [
       {
         "method": "GET",
         "summary": "item_comment",
-        "notes": {
-          "model": "Comment",
-          "resources": "comments",
-          "parent_resource": "items",
-          "controller": "active_api/nested_active_api",
-          "action": "show"
-        },
+        "notes": "{:model=>\"Comment\", :resources=>\"comments\", :parent_resource=>:items, :controller=>\"active_api/nested_active_api\", :action=>\"show\"}",
         "nickname": "item_comment",
         "parameters": [
           {
@@ -80,13 +62,7 @@
       {
         "method": "PATCH",
         "summary": "item_comment",
-        "notes": {
-          "model": "Comment",
-          "resources": "comments",
-          "parent_resource": "items",
-          "controller": "active_api/nested_active_api",
-          "action": "update"
-        },
+        "notes": "{:model=>\"Comment\", :resources=>\"comments\", :parent_resource=>:items, :controller=>\"active_api/nested_active_api\", :action=>\"update\"}",
         "nickname": "item_comment",
         "parameters": [
           {
@@ -101,13 +77,7 @@
       {
         "method": "PUT",
         "summary": "item_comment",
-        "notes": {
-          "model": "Comment",
-          "resources": "comments",
-          "parent_resource": "items",
-          "controller": "active_api/nested_active_api",
-          "action": "update"
-        },
+        "notes": "{:model=>\"Comment\", :resources=>\"comments\", :parent_resource=>:items, :controller=>\"active_api/nested_active_api\", :action=>\"update\"}",
         "nickname": "item_comment",
         "parameters": [
           {
@@ -122,13 +92,7 @@
       {
         "method": "DELETE",
         "summary": "item_comment",
-        "notes": {
-          "model": "Comment",
-          "resources": "comments",
-          "parent_resource": "items",
-          "controller": "active_api/nested_active_api",
-          "action": "destroy"
-        },
+        "notes": "{:model=>\"Comment\", :resources=>\"comments\", :parent_resource=>:items, :controller=>\"active_api/nested_active_api\", :action=>\"destroy\"}",
         "nickname": "item_comment",
         "parameters": [
           {
@@ -142,19 +106,14 @@
       }
     ],
     "description": "DELETE : item_comment",
-    "path": "/items/:item_id/comments/:id(.:format)"
+    "path": "/items/:item_id/comments/:id"
   },
   {
     "operations": [
       {
         "method": "GET",
         "summary": "items",
-        "notes": {
-          "model": "Item",
-          "resources": "items",
-          "controller": "active_api/active_api",
-          "action": "index"
-        },
+        "notes": "{:model=>\"Item\", :resources=>\"items\", :controller=>\"active_api/active_api\", :action=>\"index\"}",
         "nickname": "items",
         "parameters": [
           {
@@ -169,12 +128,7 @@
       {
         "method": "POST",
         "summary": "items",
-        "notes": {
-          "model": "Item",
-          "resources": "items",
-          "controller": "active_api/active_api",
-          "action": "create"
-        },
+        "notes": "{:model=>\"Item\", :resources=>\"items\", :controller=>\"active_api/active_api\", :action=>\"create\"}",
         "nickname": "items",
         "parameters": [
           {
@@ -188,19 +142,14 @@
       }
     ],
     "description": "POST : items",
-    "path": "/items(.:format)"
+    "path": "/items"
   },
   {
     "operations": [
       {
         "method": "GET",
         "summary": "item",
-        "notes": {
-          "model": "Item",
-          "resources": "items",
-          "controller": "active_api/active_api",
-          "action": "show"
-        },
+        "notes": "{:model=>\"Item\", :resources=>\"items\", :controller=>\"active_api/active_api\", :action=>\"show\"}",
         "nickname": "item",
         "parameters": [
           {
@@ -215,12 +164,7 @@
       {
         "method": "PATCH",
         "summary": "item",
-        "notes": {
-          "model": "Item",
-          "resources": "items",
-          "controller": "active_api/active_api",
-          "action": "update"
-        },
+        "notes": "{:model=>\"Item\", :resources=>\"items\", :controller=>\"active_api/active_api\", :action=>\"update\"}",
         "nickname": "item",
         "parameters": [
           {
@@ -235,12 +179,7 @@
       {
         "method": "PUT",
         "summary": "item",
-        "notes": {
-          "model": "Item",
-          "resources": "items",
-          "controller": "active_api/active_api",
-          "action": "update"
-        },
+        "notes": "{:model=>\"Item\", :resources=>\"items\", :controller=>\"active_api/active_api\", :action=>\"update\"}",
         "nickname": "item",
         "parameters": [
           {
@@ -255,12 +194,7 @@
       {
         "method": "DELETE",
         "summary": "item",
-        "notes": {
-          "model": "Item",
-          "resources": "items",
-          "controller": "active_api/active_api",
-          "action": "destroy"
-        },
+        "notes": "{:model=>\"Item\", :resources=>\"items\", :controller=>\"active_api/active_api\", :action=>\"destroy\"}",
         "nickname": "item",
         "parameters": [
           {
@@ -274,20 +208,14 @@
       }
     ],
     "description": "DELETE : item",
-    "path": "/items/:id(.:format)"
+    "path": "/items/:id"
   },
   {
     "operations": [
       {
         "method": "GET",
         "summary": "users",
-        "notes": {
-          "model": "User",
-          "resources": "users",
-          "serializer": "human",
-          "controller": "active_api/active_api",
-          "action": "index"
-        },
+        "notes": "{:model=>\"User\", :resources=>\"users\", :serializer=>\"human\", :controller=>\"active_api/active_api\", :action=>\"index\"}",
         "nickname": "users",
         "parameters": [
           {
@@ -302,13 +230,7 @@
       {
         "method": "POST",
         "summary": "users",
-        "notes": {
-          "model": "User",
-          "resources": "users",
-          "serializer": "human",
-          "controller": "active_api/active_api",
-          "action": "create"
-        },
+        "notes": "{:model=>\"User\", :resources=>\"users\", :serializer=>\"human\", :controller=>\"active_api/active_api\", :action=>\"create\"}",
         "nickname": "users",
         "parameters": [
           {
@@ -322,20 +244,14 @@
       }
     ],
     "description": "POST : users",
-    "path": "/users(.:format)"
+    "path": "/users"
   },
   {
     "operations": [
       {
         "method": "GET",
         "summary": "user",
-        "notes": {
-          "model": "User",
-          "resources": "users",
-          "serializer": "human",
-          "controller": "active_api/active_api",
-          "action": "show"
-        },
+        "notes": "{:model=>\"User\", :resources=>\"users\", :serializer=>\"human\", :controller=>\"active_api/active_api\", :action=>\"show\"}",
         "nickname": "user",
         "parameters": [
           {
@@ -350,13 +266,7 @@
       {
         "method": "PATCH",
         "summary": "user",
-        "notes": {
-          "model": "User",
-          "resources": "users",
-          "serializer": "human",
-          "controller": "active_api/active_api",
-          "action": "update"
-        },
+        "notes": "{:model=>\"User\", :resources=>\"users\", :serializer=>\"human\", :controller=>\"active_api/active_api\", :action=>\"update\"}",
         "nickname": "user",
         "parameters": [
           {
@@ -371,13 +281,7 @@
       {
         "method": "PUT",
         "summary": "user",
-        "notes": {
-          "model": "User",
-          "resources": "users",
-          "serializer": "human",
-          "controller": "active_api/active_api",
-          "action": "update"
-        },
+        "notes": "{:model=>\"User\", :resources=>\"users\", :serializer=>\"human\", :controller=>\"active_api/active_api\", :action=>\"update\"}",
         "nickname": "user",
         "parameters": [
           {
@@ -392,13 +296,7 @@
       {
         "method": "DELETE",
         "summary": "user",
-        "notes": {
-          "model": "User",
-          "resources": "users",
-          "serializer": "human",
-          "controller": "active_api/active_api",
-          "action": "destroy"
-        },
+        "notes": "{:model=>\"User\", :resources=>\"users\", :serializer=>\"human\", :controller=>\"active_api/active_api\", :action=>\"destroy\"}",
         "nickname": "user",
         "parameters": [
           {
@@ -412,7 +310,49 @@
       }
     ],
     "description": "DELETE : user",
-    "path": "/users/:id(.:format)"
+    "path": "/users/:id"
+  },
+  {
+    "operations": [
+      {
+        "method": "GET",
+        "summary": "root",
+        "notes": "{:controller=>\"active_api/application\", :action=>\"root\"}",
+        "nickname": "root",
+        "parameters": [
+          {
+            "name": "body",
+            "description": "param description.",
+            "required": true,
+            "type": null,
+            "paramType": "body"
+          }
+        ]
+      }
+    ],
+    "description": "GET : root",
+    "path": ""
+  },
+  {
+    "operations": [
+      {
+        "method": "",
+        "summary": "grape_swagger_rails",
+        "notes": "{}",
+        "nickname": "grape_swagger_rails",
+        "parameters": [
+          {
+            "name": "body",
+            "description": "param description.",
+            "required": true,
+            "type": null,
+            "paramType": "body"
+          }
+        ]
+      }
+    ],
+    "description": " : grape_swagger_rails",
+    "path": "/api-doc"
   }
 ],
   "info": {
