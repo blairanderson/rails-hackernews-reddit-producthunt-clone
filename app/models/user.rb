@@ -1,6 +1,13 @@
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
 
+  before_create do
+    begin
+      self.token = SecureRandom.hex
+    end while self.class.exists?(token: token)
+  end
+
+
   validates :password, length: { minimum: 5 }
   validates :password, confirmation: true
   validates :password_confirmation, presence: true
@@ -22,4 +29,5 @@ class User < ActiveRecord::Base
   def username
     disabled? ? "[deleted]" : read_attribute(:username).downcase
   end
+
 end

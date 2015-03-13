@@ -9,7 +9,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :karma, default: 0, null: false
       t.text :about
       t.string :auth
-      t.string :api_seceret
+      t.string :token
       t.datetime :karma_increment_time
       t.datetime :pwd_reset
       t.integer :replies_count, default: 0, null: false
@@ -18,6 +18,6 @@ class CreateUsers < ActiveRecord::Migration
     end
 
     add_index :users, :username, unique: true
-    add_index :users, [:auth , :api_seceret]
+    add_index :users, [:auth , :token]
   end
 end

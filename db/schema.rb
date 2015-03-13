@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20150216170958) do
     t.integer  "karma",                default: 0,     null: false
     t.text     "about"
     t.string   "auth"
-    t.string   "api_seceret"
+    t.string   "token"
     t.datetime "karma_increment_time"
     t.datetime "pwd_reset"
     t.integer  "replies_count",        default: 0,     null: false
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20150216170958) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["auth", "api_seceret"], name: "index_users_on_auth_and_api_seceret", using: :btree
+  add_index "users", ["auth", "token"], name: "index_users_on_auth_and_token", using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
   create_table "votes", force: :cascade do |t|
