@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
   end
 
   def username
-    disabled? ? "[deleted]" : read_attribute(:username).downcase
+    disabled? ? "[deleted]" : read_attribute(:username)
   end
 
 end
