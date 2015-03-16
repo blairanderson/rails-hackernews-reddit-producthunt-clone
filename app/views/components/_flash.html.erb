@@ -1,4 +1,12 @@
-<div>
-  <p id="notice"><%= flash[:notice] %></p>
-  <p id="alert"><%= flash[:alert] %></p>
-</div>
+<% if flash[:notice] || flash[:alert] %>
+  <div class="alert">
+    <% if flash[:notice] %>
+      <p class="alert alert-warning"><%= flash[:notice] %></p>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <p class="alert alert-danger"><%= flash[:alert] %></p>
+    <% end %>
+  </div>
+<% end %>
+

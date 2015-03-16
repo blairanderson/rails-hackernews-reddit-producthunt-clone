@@ -1,8 +1,8 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Admin : Listing Items</h1>
-<%= link_to 'New Item', new_admin_item_path %>
-<button id="reset-and-load-from-hn" data-api="<%= active_api_path %>">Reset and Load from HackerNews</button>
+<%= link_to 'New Item', new_admin_item_path, class: 'btn btn-link' %>
+
+<button id="reset-and-load-from-hn" data-api="<%= active_api_path %>" class="btn btn-default">Reset and Load from HackerNews</button>
+
 <table>
   <thead>
     <tr>
@@ -14,3 +14,5 @@
   </tbody>
 </table>
 
+
+<%= javascript_include_tag 'admin/root' %>

@@ -8,9 +8,9 @@ class User < ActiveRecord::Base
   end
 
 
-  validates :password, length: { minimum: 5 }
-  validates :password, confirmation: true
-  validates :password_confirmation, presence: true
+  validates :password, length: { minimum: 5 }, if: :password
+  validates :password, confirmation: true, if: :password
+  validates :password_confirmation, presence: true, if: :password
 
   validates :username, uniqueness: true, length: {minimum: 2}
 

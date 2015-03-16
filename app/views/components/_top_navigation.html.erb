@@ -1,27 +1,43 @@
-<div class="row">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to title, root_path, class: 'navbar-brand' %>
+    </div>
+    <div class="navbar-collapse collapse navbar-right">
+      <ul class="nav navbar-nav">
+        <%= link_to_list_item("TOP", items_path) %>
+        <%= link_to_list_item("NEW", items_path(newest: true)) %>
+        <% if current_user %>
+          <%= link_to_list_item 'SUBMIT', new_item_path %>
+          <% if @item && @item.persisted? && @item.user_id == current_user.id %>
+            <%= link_to_list_item 'EDIT', edit_item_path(@item) %>
+          <% end %>
+        <% else %>
+          <%= link_to_list_item 'REGISTER', new_user_path %>
+          <%= link_to_list_item 'LOGIN', :login %>
+        <% end %>
 
-  <div class="items-nav" style="float: left; width:50%;">
-    <%= link_to title, items_path %>
-    <%= link_to 'new', items_path(newest: true) %>
-    <% if current_user %>
-      <%= link_to 'submit', new_item_path %>
-      <% if @item && @item.persisted? && @item.user_id == current_user.id %>
-        <%= link_to 'edit', edit_item_path(@item) %>
-      <% end %>
-    <% end %>
+        <% if current_user %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">PROFILE <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <%= link_to_list_item current_user.username.try(:upcase), current_user %>
+              <%= link_to_list_item 'EDIT PROFILE', edit_user_path(current_user) %>
+              <%= link_to_list_item 'LOGOUT', :logout, method: :post %>
+            </ul>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
-
-  <div class="user-nav" style="float: left; width:50%; text-align: right;">
-    <% if current_user %>
-      <%= link_to current_user.username, current_user  %>
-      <%= link_to 'edit profile', edit_user_path(current_user.id) %>
-      <%= link_to 'logout', :logout, method: :post %>
-    <% else %>
-      <%= link_to 'register', new_user_path %> |
-      <%= link_to 'login', :login %>
-    <% end %>
-  </div>
-
 </div>
+<%= render 'components/flash' %>
 
 

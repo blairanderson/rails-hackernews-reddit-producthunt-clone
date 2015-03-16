@@ -6,6 +6,7 @@ gem 'active_model_serializers'
 gem 'active_api', github: 'blairanderson/active_api'
 # gem 'active_api', path: '../active_api'
 
+gem 'bootstrap-sass', '~> 3.3.3'
 gem 'jquery-rails'
 gem 'pg'
 gem 'rails', '4.2.0'
@@ -15,6 +16,11 @@ gem 'sass-rails', '~> 5.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'validate_url'
+
+# This allows us to import bower packages
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap-material-design'
+end
 
 group :production do
   gem 'rails_12factor'
@@ -31,6 +37,7 @@ group :development, :test do
 
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'pry'
   gem 'rspec-rails', '~> 3.0' # https://github.com/rspec/rspec-rails
   gem 'rspec_api_documentation' # https://github.com/zipmark/rspec_api_documentation
   gem 'shoulda-matchers'

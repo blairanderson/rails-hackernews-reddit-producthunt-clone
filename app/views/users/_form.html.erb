@@ -1,18 +1,11 @@
-<%= simple_form_for(@user) do |f| %>
+<%= simple_form_for(@user, html: { class: 'form-horizontal' }) do |f| %>
   <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :username %>
-    <%= f.input :password, as: :password %>
-    <%= f.input :password_confirmation, as: :password %>
-  </div>
-
-  <div class="form-inputs">
-    <%= f.input :about %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <%= f.input :username %>
+  <%= f.input :password, as: :password %>
+  <%= f.input :password_confirmation, as: :password %>
+  <%= f.input :about %>
+  <div class="row">
+    <%= f.button :submit, class: 'btn-block' %>
   </div>
 <% end %>
 
