@@ -3,7 +3,6 @@ class Admin::ItemsController < ApplicationController
     current_admin = !!(current_user && current_user.admin?)
     unless current_admin
       redirect_to root_path, alert: "Unauthorized."
-      return
     end
   end
   before_action :set_admin_item, only: [:show, :edit, :update, :destroy]
