@@ -130,20 +130,19 @@ a:focus {
 	font-size: 12px;
 }
 
-.btn-theme {
+.btn-theme,
+.btn-theme:focus,
+.btn-theme:active,
+.btn-theme.active, {
   color: #fff;
   background-color: #384452;
   border-color: #384452;
-  margin: 4px;
-}
-.btn-theme:hover,
-.btn-theme:focus,
-.btn-theme:active,
-.btn-theme.active,
-.open .dropdown-toggle.btn-theme {
-  color: #fff;
-  background-color: #00b3fe;
-  border-color: #00b3fe;
+
+  &:hover {
+    color: #fff;
+    background-color: #00b3fe;
+    border-color: #384452;
+  }
 }
 
 .dmbutton:hover,

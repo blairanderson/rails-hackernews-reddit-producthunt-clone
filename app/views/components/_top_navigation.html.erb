@@ -30,7 +30,7 @@
             <ul class="dropdown-menu">
               <%= link_to_list_item current_user.username.try(:upcase), current_user %>
               <%= link_to_list_item 'EDIT PROFILE', edit_user_path(current_user) %>
-              <%= link_to_list_item 'LOGOUT', :logout, method: :post %>
+              <%= link_to_list_item 'LOGOUT', logout_path, method: :post %>
             </ul>
           </li>
         <% end %>

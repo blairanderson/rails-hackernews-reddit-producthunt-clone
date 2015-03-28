@@ -1,5 +1,7 @@
 <% if current_user && logged_in? %>
+  <!--Do stuff with the user? maybe show something else?-->
 
+  <!--maybe show some messages? or popular posts. some other call to action.-->
 <% else %>
   <!-- *****************************************************************************************************************
    HEADERWRAP
@@ -14,38 +16,32 @@
 
           <h1>Start Your Own Link Sharing Community!</h1>
           <h5>Immediately start signing people up and let them share links and more!</h5>
-          <h5>Create your own.</h5>
           <% @user ||= User.new %>
-
           <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
-              <div class="row">
-                <%= link_to 'LOGIN', "#root-login", class: 'btn btn-theme btn-lg btn-block', data: {toggle: 'collapse', target: '#root-login'} %>
-              </div>
-              <div class="collapse" id="root-login">
+              <div class="form-group">
                 <div class="row">
-                  <div class="col-xs-12">
-                    <%= render partial: 'user_sessions/form' %>
-                  </div>
+                  <%= link_to 'LOGIN', "javascript:void(0)", class: 'btn btn-theme btn-lg btn-block', data: {toggle: 'collapse', target: '#root-login'} %>
+                </div>
+
+                <div class="collapse" id="root-login">
+                  <%= render partial: 'user_sessions/form' %>
                 </div>
               </div>
-              <div class="row">
-                <%= link_to 'REGISTER', "#root-register", class: 'btn btn-theme btn-lg btn-block', data: {toggle: 'collapse', target: '#root-register'} %>
-              </div>
-              <div class="collapse" id="root-register">
+
+              <div class="form-group">
                 <div class="row">
-                  <div class="col-xs-12">
-                    <%= render partial: 'users/form' %>
-                  </div>
+                  <%= link_to 'REGISTER', "javascript:void(0)", class: 'btn btn-theme btn-lg btn-block', data: {toggle: 'collapse', target: '#root-register'} %>
+                </div>
+
+                <div class="collapse" id="root-register">
+                  <%= render partial: 'users/form' %>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- /row -->
     </div>
-    <!-- /container -->
   </div>
-  <!-- /headerwrap -->
 <% end %>

@@ -8,19 +8,13 @@
 </head>
 <body style="padding-top:70px">
 <%= render 'components/top_navigation' %>
-<%= render 'components/login_register' %>
+<%= yield :headerwrap %>
 
 <div id="service">
   <div class="container">
     <%= yield %>
   </div>
 </div>
-<%# render partial: 'layouts/index' %>
 
-<% if current_user %>
-  <script>
-    window.current_user = <%= current_user.to_json.html_safe %>;
-  </script>
-<% end %>
 </body>
 </html>
