@@ -28,5 +28,48 @@ I think this is why wordpress is SO popular. Its stupid-easy to fire-up, and cha
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-### Changing the Code!!!
+### Change the Code!!!
 
+My main goal for this is to give new programmers some code to look at and talk about. Anytime i [get questions](/issues), I plan to add them here...
+
+*Open your terminal*
+
+```bash
+
+$ git clone git@github.com:blairanderson/rails-hackernews-reddit-producthunt-clone.git link-site
+$ cd link-site
+
+```
+
+*Lets look at some code*
+
+When someone visits your website, they're literally just *request*ing some HTML, CSS, and Javascript! *requests* come to your application through the ROUTER.
+
+```ruby
+ # config/routes.rb
+
+Rails.application.routes.draw do
+  resources :items, except: [:destroy] do
+    resources :item_comments
+    member do
+      post :toggle
+      post :vote, to: 'user_item_votes#create'
+      delete :vote, to: 'user_item_votes#destroy'
+    end
+  end
+
+  root to: 'items#index'
+
+  resources :users, except: [:index]
+  resources :user_sessions, only: [:new, :create, :destroy]
+
+  get 'login' => 'user_sessions#new', as: :login
+  match 'logout' => 'user_sessions#destroy', as: :logout, via: [:get, :post]
+
+  namespace :admin do
+    root to: 'items#index'
+    resources :items
+  end
+end
+
+```

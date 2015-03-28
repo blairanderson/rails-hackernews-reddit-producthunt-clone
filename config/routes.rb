@@ -1,12 +1,6 @@
-Rails.application.routes.draw do
-  namespace :admin do
-    root to: 'items#index'
-    resources :items
-  end
+# Updating routes? Please update the readme as well.
 
-  root to: 'items#index'
-  resources :user_sessions, only: [:new, :create, :destroy]
-  resources :users, except: [:index]
+Rails.application.routes.draw do
   resources :items, except: [:destroy] do
     resources :item_comments
     member do
@@ -16,6 +10,16 @@ Rails.application.routes.draw do
     end
   end
 
+  root to: 'items#index'
+
+  resources :users, except: [:index]
+  resources :user_sessions, only: [:new, :create, :destroy]
+
   get 'login' => 'user_sessions#new', as: :login
   match 'logout' => 'user_sessions#destroy', as: :logout, via: [:get, :post]
+
+  namespace :admin do
+    root to: 'items#index'
+    resources :items
+  end
 end
