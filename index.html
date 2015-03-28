@@ -4,49 +4,126 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Hackernews / Reddit / ProductHunt - open-source rails clone by blairanderson</title>
+
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/blairanderson/rails-hackernews-reddit-producthunt-clone">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/blairanderson/rails-hackernews-reddit-producthunt-clone/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/blairanderson/rails-hackernews-reddit-producthunt-clone/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
-
     <div class="wrapper">
+      <header>
+        <h1>Hackernews / Reddit / ProductHunt - open-source rails clone</h1>
+        <p>This is a starting point to get your own simple social link-sharing website. Its built with ruby-on-rails</p>
 
+        <p class="view"><a href="https://github.com/blairanderson/rails-hackernews-reddit-producthunt-clone">View the Project on GitHub <small>blairanderson/rails-hackernews-reddit-producthunt-clone</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/blairanderson/rails-hackernews-reddit-producthunt-clone/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/blairanderson/rails-hackernews-reddit-producthunt-clone/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/blairanderson/rails-hackernews-reddit-producthunt-clone">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
       <section>
-        <div id="title">
-          <h1>Hackernews / Reddit / ProductHunt - open-source rails clone</h1>
-          <p>This is a starting point to get your own simple social link-sharing website. Its built with ruby-on-rails</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/blairanderson">blairanderson</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+        <h1>
+<a id="reddit-hackernews-producthunt-clone-on-rails" class="anchor" href="#reddit-hackernews-producthunt-clone-on-rails" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reddit-Hackernews-ProductHunt Clone on Rails</h1>
 
-        <p>== ReddiHackerHunt</p>
+<p><strong><a href="https://hackernews-rails-clone.herokuapp.com/">DEMO</a></strong></p>
 
+<p><img src="https://cdn.rawgit.com/blairanderson/rails-hackernews-reddit-producthunt-clone/master/public/screenshot.png" alt="Screenshot"></p>
 
+<p>This is the <code>readme.md</code> for a Ruby on Rails application that mimics social news link sharing websites like HackerNews, ProductHunt, and Reddit.</p>
 
+<p>Obviously the styling is different but the base functionality exists.</p>
 
+<h3>
+<a id="why" class="anchor" href="#why" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why?</h3>
+
+<p>Because when i was learning to program, I wanted to play with code that had a familiar model and get some instant gratification.</p>
+
+<p>The problem with learning to code is the learning-curve. Shit is real and painful and i found that the best cure for the pain was cloning an app with features and tweaking until it broke and learning along the way.</p>
+
+<p>I think this is why wordpress is SO popular. Its stupid-easy to fire-up, and changes come with one-click package installs and tiny code changes.</p>
+
+<h3>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h3>
+
+<ul>
+<li>A visitor can view the list of items</li>
+<li>A visitor can view a single item and comment on it</li>
+<li>A visitor can register for an account</li>
+<li>A user can login and logout</li>
+<li>A user can submit a new item</li>
+<li>A user can like/unlike an item</li>
+</ul>
+
+<h3>
+<a id="deploy" class="anchor" href="#deploy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deploy?</h3>
+
+<p><a href="https://heroku.com/deploy"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
+
+<h3>
+<a id="change-the-code" class="anchor" href="#change-the-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Change the Code!!!</h3>
+
+<p>My main goal for this is to give new programmers some code to look at and talk about. Anytime i <a href="/issues">get questions</a>, I plan to add them here...</p>
+
+<p><em>Open your terminal</em></p>
+
+<div class="highlight highlight-bash"><pre>
+$ git clone git@github.com:blairanderson/rails-hackernews-reddit-producthunt-clone.git link-site
+$ <span class="pl-c1">cd</span> link-site
+</pre></div>
+
+<p><em>Lets look at some code</em></p>
+
+<p>When someone visits your website, they're literally just <em>request</em>ing some HTML, CSS, and Javascript! <em>requests</em> come to your application through the ROUTER.</p>
+
+<div class="highlight highlight-ruby"><pre> <span class="pl-c"># config/routes.rb</span>
+
+<span class="pl-c1">Rails</span>.application.routes.draw <span class="pl-k">do</span>
+  resources <span class="pl-c1">:items</span>, <span class="pl-c1">except:</span> [<span class="pl-c1">:destroy</span>] <span class="pl-k">do</span>
+    resources <span class="pl-c1">:item_comments</span>
+    member <span class="pl-k">do</span>
+      post <span class="pl-c1">:toggle</span>
+      post <span class="pl-c1">:vote</span>, <span class="pl-c1">to:</span> <span class="pl-s"><span class="pl-pds">'</span>user_item_votes#create<span class="pl-pds">'</span></span>
+      delete <span class="pl-c1">:vote</span>, <span class="pl-c1">to:</span> <span class="pl-s"><span class="pl-pds">'</span>user_item_votes#destroy<span class="pl-pds">'</span></span>
+    <span class="pl-k">end</span>
+  <span class="pl-k">end</span>
+
+  root <span class="pl-c1">to:</span> <span class="pl-s"><span class="pl-pds">'</span>items#index<span class="pl-pds">'</span></span>
+
+  resources <span class="pl-c1">:users</span>, <span class="pl-c1">except:</span> [<span class="pl-c1">:index</span>]
+  resources <span class="pl-c1">:user_sessions</span>, <span class="pl-c1">only:</span> [<span class="pl-c1">:new</span>, <span class="pl-c1">:create</span>, <span class="pl-c1">:destroy</span>]
+
+  get <span class="pl-s"><span class="pl-pds">'</span>login<span class="pl-pds">'</span></span> =&gt; <span class="pl-s"><span class="pl-pds">'</span>user_sessions#new<span class="pl-pds">'</span></span>, <span class="pl-c1">as:</span> <span class="pl-c1">:login</span>
+  match <span class="pl-s"><span class="pl-pds">'</span>logout<span class="pl-pds">'</span></span> =&gt; <span class="pl-s"><span class="pl-pds">'</span>user_sessions#destroy<span class="pl-pds">'</span></span>, <span class="pl-c1">as:</span> <span class="pl-c1">:logout</span>, <span class="pl-c1">via:</span> [<span class="pl-c1">:get</span>, <span class="pl-c1">:post</span>]
+
+  namespace <span class="pl-c1">:admin</span> <span class="pl-k">do</span>
+    root <span class="pl-c1">to:</span> <span class="pl-s"><span class="pl-pds">'</span>items#index<span class="pl-pds">'</span></span>
+    resources <span class="pl-c1">:items</span>
+  <span class="pl-k">end</span>
+<span class="pl-k">end</span>
+</pre></div>
       </section>
-
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/blairanderson">blairanderson</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-61052500-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
