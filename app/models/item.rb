@@ -4,6 +4,7 @@ class Item < ActiveRecord::Base
   has_many :comments, class_name: "ItemComment"
 
   validates :title, presence: true, length: { maximum: 250 }, allow_blank: false, allow_nil: false
+  validates :id, uniqueness: true
 
   validate do
     if content.blank? && url.blank?

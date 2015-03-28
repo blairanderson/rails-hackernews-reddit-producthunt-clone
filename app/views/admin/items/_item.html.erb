@@ -1,8 +1,9 @@
-<tr>
-  <td><%= item.title %></td>
-  <td><%= item.url %></td>
-  <td><%= item.content %></td>
-  <td><%= link_to 'show', item %></td>
-  <td><%= link_to 'Edit', edit_admin_item_path(item) %></td>
-  <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-</tr>
+<li class="list-group-item">
+  <div class="pull-right">
+    <%= link_to 'Edit', edit_admin_item_path(item) %>
+    <%= link_to 'Destroy', admin_item_path(item), method: :delete, data: {confirm: 'Are you sure?'} %>
+  </div>
+  <div><%= link_to item.title, item %></div>
+  <div><%= item.url %></div>
+  <div><%= item.content %></div>
+</li>

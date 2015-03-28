@@ -7,11 +7,9 @@ class UserSessionsController < ApplicationController
 
   def create
     if @user = login(login_params[:username], login_params[:password])
-
       redirect_back_or_to root_path, notice: 'Login successful'
     else
-
-      render action: 'new', alert: 'Login failed'
+      render action: 'new', notice: 'Try Again'
     end
   end
 

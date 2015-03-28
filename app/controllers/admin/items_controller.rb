@@ -22,12 +22,16 @@ class Admin::ItemsController < ApplicationController
   end
 
   def create
-    @admin_item = Item.new(admin_item_params)
+    @admin_item = current_user.items.build(admin_item_params)
 
-    if @admin_item.save
-      redirect_to @admin_item, notice: 'Item was successfully created.'
-    else
-      render action: 'new'
+    respond_to do |f|
+      if @admin_item.save
+        f.html {redirect_to @admin_item, notice: 'Item was successfully created.'}
+        f.json {render json: @admin_item}
+      else
+        f.html {render action: 'new'}
+        f.json {render json: @admin_item.errors, status: :unprocessable_entity}
+      end
     end
   end
 
@@ -52,6 +56,6 @@ class Admin::ItemsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def admin_item_params
-    params[:admin_item].permit!
+    params.require(:item).permit(*Item.new.attributes.keys)
   end
 end

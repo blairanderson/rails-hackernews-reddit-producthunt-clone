@@ -26,32 +26,31 @@ ready(function() {
     //https://github.com/HackerNews/API
     //  use api to fetch the top hackernews stories.
     $.getJSON("https://hacker-news.firebaseio.com/v0/topstories.json", function(stories, status, jqxhr) {
-
+      //stories.slice(0, 2).forEach(function(story_id) {
       stories.forEach(function(story_id) {
         fetchStory(story_id, function(error, result) {
-          if (error || !result.item ) {
+          if (error || !result.item) {
             console.log('rawr', error, result);
             return
           }
 
-          $.ajax({
-            type: "POST",
-            url: apiRoot + "/items",
-            data: result,
-            dataType: "JSON",
+          var request = $.ajax({
+            type: "POST", url: apiRoot, data: result, dataType: "JSON",
             headers: {
-              "Authorization": "Token token="+window.current_user.token
+              "Authorization": "Token token=" + window.current_user.token
             }
-          }).success(function(e) {
-            debugger
+          });
 
-          }).error(function(e) {
+          request.success(function(e) {
+            debugger
+          });
+
+          request.error(function(e) {
             debugger
           });
 
         });
       })
     });
-    //  use api to add all the hackernews stories
   })
 })

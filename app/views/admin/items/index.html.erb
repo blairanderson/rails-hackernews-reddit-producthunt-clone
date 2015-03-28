@@ -1,18 +1,17 @@
 <h1>Admin : Listing Items</h1>
 <%= link_to 'New Item', new_admin_item_path, class: 'btn btn-link' %>
 
-<button id="reset-and-load-from-hn" data-api="<%= active_api_path %>" class="btn btn-default">Reset and Load from HackerNews</button>
+<button id="reset-and-load-from-hn" data-api="<%= admin_items_path %>" class="btn btn-default">Reset and Load from HackerNews</button>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="6"></th>
-    </tr>
-  </thead>
-  <tbody>
+<ul class="list-group">
   <%= render @admin_items %>
-  </tbody>
-</table>
+</ul>
 
 
-<%= javascript_include_tag 'admin/root' %>
+<% content_for :javascripts do %>
+  <%= javascript_include_tag 'admin/root' %>
+  <script>
+    window.current_user = <%= current_user.to_json.html_safe %>
+  </script>
+<% end %>
+
