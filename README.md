@@ -1,5 +1,7 @@
 # Reddit-Hackernews-ProductHunt Clone on Rails
 
+**[DEMO](https://hackernews-rails-clone.herokuapp.com/)**
+
 This is the `readme.md` for a Ruby on Rails application that mimics social news link sharing websites like HackerNews, ProductHunt, and Reddit.
 
 Obviously the styling is different but the base functionality exists.
