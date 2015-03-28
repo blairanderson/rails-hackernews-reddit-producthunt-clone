@@ -17,6 +17,5 @@ Rails.application.routes.draw do
   end
 
   get 'login' => 'user_sessions#new', as: :login
-  post 'logout' => 'user_sessions#destroy', as: :logout
-  mount ActiveApi::Engine => '/api'
+  match 'logout' => 'user_sessions#destroy', as: :logout, via: [:get, :post]
 end

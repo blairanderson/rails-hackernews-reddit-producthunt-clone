@@ -10,10 +10,6 @@ class ItemsController < ApplicationController
     @votes = @items.includes(:votes).each_with_object({}) do |item, object|
       object[item.id] = item.votes.map(&:user_id)
     end
-    respond_to do |format|
-      format.html
-      format.json { render json: @items }
-    end
   end
 
   def show
