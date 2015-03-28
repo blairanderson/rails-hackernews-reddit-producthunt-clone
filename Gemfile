@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 
 
 gem 'active_model_serializers'
-gem 'active_api', github: 'blairanderson/active_api'
-# gem 'active_api', path: '../active_api'
+# gem 'active_api', github: 'blairanderson/active_api'
+gem 'active_api', path: '../active_api'
 
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'jquery-rails'

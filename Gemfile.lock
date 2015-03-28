@@ -1,6 +1,5 @@
-GIT
-  remote: git://github.com/blairanderson/active_api.git
-  revision: 37b285bb3d4ba03d907e4b69474fe98d51ab4adb
+PATH
+  remote: ../active_api
   specs:
     active_api (0.0.1)
       active_model_serializers

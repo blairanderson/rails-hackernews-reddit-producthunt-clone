@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
     end while self.class.exists?(token: token)
   end
 
-
   validates :password, length: { minimum: 5 }, if: :password
   validates :password, confirmation: true, if: :password
   validates :password_confirmation, presence: true, if: :password

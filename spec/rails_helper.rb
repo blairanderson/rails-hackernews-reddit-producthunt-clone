@@ -56,3 +56,13 @@ end
 def json
   @json ||= JSON.parse(response.body)
 end
+
+def by(message)
+  if block_given?
+    yield
+  else
+    pending message
+  end
+end
+
+alias and_by by

@@ -10,7 +10,7 @@ describe ActiveApi, "items" do
 
       get active_api_path + "items"
       expect(response).to be_success # test for the 200 status-code
-      expect(json['items'].length).to eq(length) # check to make sure the right amount of messages are returned
+      expect(json['data'].length).to eq(length) # check to make sure the right amount of messages are returned
     end
 
     it 'gets authenticated items' do
@@ -21,7 +21,17 @@ describe ActiveApi, "items" do
 
       get active_api_path + "items", nil, {'Authorization' => "Token token=#{user.token}"}
       expect(response).to be_success
-      expect(json['items'].length).to eq(expected_number)
+      expect(json['data'].length).to eq(expected_number)
+    end
+
+    it "acts like a JSON::API" do
+      expected = JSON.parse(File.read(File.join(Rails.root, "spec/requests/json_api_spec.json")))
+      FactoryGirl.create_list(:item, 20)
+      get active_api_path + "items"
+      expect(response).to be_success
+
+      expected_links = expected['links'].keys
+      expect(json['links'].keys).to eq(expected_links)
     end
   end
 

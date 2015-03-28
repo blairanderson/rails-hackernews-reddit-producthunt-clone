@@ -1,5 +1,5 @@
 class ItemSerializer < ActiveModel::Serializer
-  # self.per_page = 1
+  self.per_page = 10
 
   has_scope :newest, type: :boolean
   has_scope :disabled, type: :boolean
