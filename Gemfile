@@ -5,6 +5,7 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem 'jquery-rails'
 gem 'pg'
 gem 'rails', '4.2.0'
+gem 'rails_12factor', group: :production
 gem 'simple_form'
 gem 'sorcery', '0.9.0'
 gem 'sass-rails', '~> 5.0'
@@ -17,9 +18,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap-material-design'
 end
 
-group :production do
-  gem 'rails_12factor'
-end
+
 
 group :development, :test do
 

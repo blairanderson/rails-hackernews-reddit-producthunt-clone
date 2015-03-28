@@ -41,5 +41,7 @@ disabled_user = User.create({
   disabled_user.items.create(item)
 end
 
-puts "created admin user with username: 'admin' and password: 'password'"
+[admin, user, disabled_user].each do |u|
+  puts "created user: #{u.attributes.inspect}"
+end
 
