@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-  def site_title
+  def site_title_text
     ENV["SITE_TITLE"] || "RRHNClone."
   end
 
