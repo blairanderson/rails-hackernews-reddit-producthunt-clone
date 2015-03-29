@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsHackernewsRedditProducthunt</title>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>Rails Hackernews Reddit Producthunt Clone Github</title>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body style="padding-top:70px">
@@ -16,6 +16,7 @@
   </div>
 </div>
 
+<%= render 'components/google_analytics' %>
 <%= yield :javascripts %>
 </body>
 

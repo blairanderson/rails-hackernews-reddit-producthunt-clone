@@ -26,15 +26,18 @@ I think this is why wordpress is SO popular. Its stupid-easy to fire-up, and cha
 - A user can login and logout
 - A user can submit a new item
 - A user can like/unlike an item
+- Google Analytics Integration
 
 
 ### Deploy?
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
+*[learn more about](https://devcenter.heroku.com/articles/app-json-schema)*
+
 ### Change the Code!!!
 
-My main goal for this is to give new programmers some code to look at and talk about. Anytime i [get questions](/issues), I plan to add them here...
+My main goal for this is to give new programmers some code to look at and talk about. Anytime i [get questions](https://github.com/blairanderson/rails-hackernews-reddit-producthunt-clone/issues), I plan to add them here...
 
 *Open your terminal*
 
