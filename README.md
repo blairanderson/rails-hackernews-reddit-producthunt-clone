@@ -81,7 +81,7 @@ end
 
 ```
 
-* Integration test with RSpec and Capybara
+## Integration test with RSpec and Capybara
 
 When writing integration tests, try to model test around an actor(user of the system) and the action they are performing.
 
@@ -158,6 +158,7 @@ Modules must be included to share common code between tests.
  ```
 
  * Running the tests
+ in your terminal you want to run the command below.
 
  ```ruby
 
