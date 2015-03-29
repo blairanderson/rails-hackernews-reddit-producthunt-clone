@@ -9,7 +9,6 @@ gem 'rails_12factor', group: :production
 gem 'simple_form'
 gem 'sorcery', '0.9.0'
 gem 'sass-rails', '~> 5.0'
-gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'validate_url'
 

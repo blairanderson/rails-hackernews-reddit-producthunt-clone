@@ -54,13 +54,6 @@ GEM
       debugger-linecache (~> 1.2)
       slop (~> 3.6)
     coderay (1.1.0)
-    coffee-rails (4.1.0)
-      coffee-script (>= 2.2.0)
-      railties (>= 4.0.0, < 5.0)
-    coffee-script (2.3.0)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.9.0)
     columnize (0.9.0)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
@@ -206,8 +199,6 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
-    turbolinks (2.5.3)
-      coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.0)
@@ -244,7 +235,6 @@ DEPENDENCIES
   simple_form
   sorcery (= 0.9.0)
   spring
-  turbolinks
   uglifier (>= 1.3.0)
   validate_url
   web-console (~> 2.0)

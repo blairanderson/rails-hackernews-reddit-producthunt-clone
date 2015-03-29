@@ -6,6 +6,8 @@
   "keywords": ["rails", "ruby-on-rails", "hackernews", "producthunt", "reddit"],
   "website": "http://www.blairanderson.co/rails-hackernews-reddit-producthunt-clone/",
   "env": {
-    "GOOGLE_ANALYTICS": "UA-12345432-2"
+    "GOOGLE_ANALYTICS": "UA-12345432-2",
+    "SITE_TITLE": "RRHNClone.",
+    "SEO_TITLE": "Rails Hackernews Reddit Producthunt Clone Github"
   }
 }

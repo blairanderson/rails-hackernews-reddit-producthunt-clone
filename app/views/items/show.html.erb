@@ -13,12 +13,15 @@
 </p>
 
 <ul>
-  <li>
-    <%= simple_form_for([@item, current_user.item_comments.build]) do |f| %>
-      <%= f.input :content, label: false, required: true %>
-      <%= f.button :submit %>
-    <% end %>
-  </li>
+  <% if current_user %>
+    <li>
+      <%= simple_form_for([@item, current_user.item_comments.build]) do |f| %>
+        <%= f.input :content, label: false, required: true %>
+        <%= f.button :submit %>
+      <% end %>
+    </li>
+  <% end %>
+
   <% @comments.each do |comment| %>
     <%= content_tag_for(:li, comment) do %>
       <span>
@@ -26,9 +29,9 @@
         <small>(posted by: <%= link_to comment.user.username, comment.user %>)</small>
       </span>
       <br/>
-        <small>
-          <%= comment.content %>
-        </small>
+      <small>
+        <%= comment.content %>
+      </small>
     <% end %>
   <% end %>
 </ul>
