@@ -1,5 +1,5 @@
 class UserItemVotesController < ApplicationController
-  before_action :set_item
+  before_action :set_item, :require_login
 
   def create
     if current_user.votes.build(vote_params).save

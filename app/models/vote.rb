@@ -22,9 +22,20 @@ class Vote < ActiveRecord::Base
   def update_votes
     attrs = self.attributes.with_indifferent_access.slice(:votable_id, :votable_type)
     count = Vote.where(attrs).count
-    get_object.update(
+    item = get_object
+
+    # Hot Score is a function defined inside:
+    # db/migrate/20150405200823_add_hot_score_function.rb
+
+    rank = item.class.where(id: item.id)
+             .select("id, hot_score(#{count}, 0, created_at) as hot_score")
+             .first.hot_score.to_i
+
+    item.update(
+      downvotes_count: 0,
       upvotes_count: count,
-      score: count
+      score: count,
+      rank: rank
     )
   end
 end
