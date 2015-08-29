@@ -1,7 +1,7 @@
 {
-  "name": "Reddit-Hackernews-ProductHunt Clone on Rails",
+  "name": "Rails Clone Reddit",
   "description": "Ruby on Rails application that mimics social news link sharing websites like HackerNews, ProductHunt, and Reddit.",
-  "repository": "github.com:blairanderson/rails-hackernews-reddit-producthunt-clone",
+  "repository": "https://github.com/blairanderson/rails-hackernews-reddit-producthunt-clone",
   "logo": "https://cdn.rawgit.com/blairanderson/rails-hackernews-reddit-producthunt-clone/master/public/rrhnclone.png",
   "keywords": ["rails", "ruby-on-rails", "hackernews", "producthunt", "reddit"],
   "website": "http://www.blairanderson.co/rails-hackernews-reddit-producthunt-clone/",
