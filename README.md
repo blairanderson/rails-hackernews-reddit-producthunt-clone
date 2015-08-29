@@ -43,8 +43,12 @@ My main goal for this is to give new programmers some code to look at and talk a
 
 ```bash
 
-$ git clone git@github.com:blairanderson/rails-hackernews-reddit-producthunt-clone.git link-site
-$ cd link-site
+$ git clone git@github.com:blairanderson/rails-hackernews-reddit-producthunt-clone.git
+$ cd rails-hackernews-reddit-producthunt-clone
+$ bundle
+$ bundle exec rake db:create
+$ bundle exec rake db:migrate
+$ bundle exec rake db:seed
 
 ```
 
