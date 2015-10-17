@@ -46,9 +46,7 @@ My main goal for this is to give new programmers some code to look at and talk a
 $ git clone git@github.com:blairanderson/rails-hackernews-reddit-producthunt-clone.git
 $ cd rails-hackernews-reddit-producthunt-clone
 $ bundle
-$ bundle exec rake db:create
-$ bundle exec rake db:migrate
-$ bundle exec rake db:seed
+$ bundle exec rake db:create db:migrate db:seed
 
 ```
 
