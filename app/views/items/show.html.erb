@@ -3,10 +3,12 @@
   <%= render_votes_for_item(@item) %>
   <span>comments: <%= @item.comments_count %></span>
 </p>
-
+<%= content_for(:title) do %>
+  <%= @item.title %>
+<% end %>
 <p>
   <strong>
-    <%= link_to @item.title, @item, title: @item.url %>
+    <h1><%= link_to @item.title, @item, title: @item.url %></h1>
     <small>(<%= @item.url %>)</small>
   </strong>
   <span><small>(posted by: <%= link_to @item.user.username, @item.user %>)</small></span>
