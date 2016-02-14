@@ -5,7 +5,7 @@
     <title>Hackernews / Reddit / ProductHunt - open-source rails clone by blairanderson</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
@@ -20,7 +20,7 @@
 
     <section class="main-content">
       <h1>
-<a id="reddit-hackernews-producthunt-clone-on-rails" class="anchor" href="#reddit-hackernews-producthunt-clone-on-rails" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reddit-Hackernews-ProductHunt Clone on Rails</h1>
+<a id="reddit-hackernews-producthunt-clone-on-rails" class="anchor" href="#reddit-hackernews-producthunt-clone-on-rails" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Reddit-Hackernews-ProductHunt Clone on Rails</h1>
 
 <p><strong><a href="https://hackernews-rails-clone.herokuapp.com/">DEMO</a></strong></p>
 
@@ -31,7 +31,7 @@
 <p>Obviously the styling is different but the base functionality exists.</p>
 
 <h3>
-<a id="why" class="anchor" href="#why" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why?</h3>
+<a id="why" class="anchor" href="#why" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why?</h3>
 
 <p>Because when i was learning to program, I wanted to play with code that had a familiar model and get some instant gratification.</p>
 
@@ -40,7 +40,7 @@
 <p>I think this is why wordpress is SO popular. Its stupid-easy to fire-up, and changes come with one-click package installs and tiny code changes.</p>
 
 <h3>
-<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h3>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h3>
 
 <ul>
 <li>A visitor can view the list of items</li>
@@ -53,20 +53,20 @@
 </ul>
 
 <h3>
-<a id="deploy" class="anchor" href="#deploy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deploy?</h3>
+<a id="deploy" class="anchor" href="#deploy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Deploy?</h3>
 
 <p><a href="https://heroku.com/deploy"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
 
 <p><em><a href="https://devcenter.heroku.com/articles/app-json-schema">learn more about</a></em></p>
 
 <h3>
-<a id="change-the-code" class="anchor" href="#change-the-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Change the Code!!!</h3>
+<a id="change-the-code" class="anchor" href="#change-the-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Change the Code!!!</h3>
 
 <p>My main goal for this is to give new programmers some code to look at and talk about. Anytime i <a href="https://github.com/blairanderson/rails-hackernews-reddit-producthunt-clone/issues">get questions</a>, I plan to add them here...</p>
 
 <p><em>Open your terminal</em></p>
 
-<div class="highlight highlight-bash"><pre>
+<div class="highlight highlight-source-shell"><pre>
 $ git clone git@github.com:blairanderson/rails-hackernews-reddit-producthunt-clone.git link-site
 $ <span class="pl-c1">cd</span> link-site
 </pre></div>
@@ -75,7 +75,7 @@ $ <span class="pl-c1">cd</span> link-site
 
 <p>When someone visits your website, they're literally just <em>request</em>ing some HTML, CSS, and Javascript! <em>requests</em> come to your application through the ROUTER.</p>
 
-<div class="highlight highlight-ruby"><pre> <span class="pl-c"># config/routes.rb</span>
+<div class="highlight highlight-source-ruby"><pre> <span class="pl-c"># config/routes.rb</span>
 
 <span class="pl-c1">Rails</span>.application.routes.draw <span class="pl-k">do</span>
   resources <span class="pl-c1">:items</span>, <span class="pl-c1">except:</span> [<span class="pl-c1">:destroy</span>] <span class="pl-k">do</span>
@@ -123,4 +123,3 @@ $ <span class="pl-c1">cd</span> link-site
 
   </body>
 </html>
-
