@@ -2,6 +2,8 @@
 
 Maintained by [Blair Anderson](https://www.blairanderson.co/)
 
+[![Open Source Helpers](https://www.codetriage.com/blairanderson/rails-hackernews-reddit-producthunt-clone/badges/users.svg)](https://www.codetriage.com/blairanderson/rails-hackernews-reddit-producthunt-clone)
+
 **[DEMO](https://hackernews-rails-clone.herokuapp.com/)**
 
 ![Screenshot](https://cdn.rawgit.com/blairanderson/rails-hackernews-reddit-producthunt-clone/master/public/screenshot.png)
