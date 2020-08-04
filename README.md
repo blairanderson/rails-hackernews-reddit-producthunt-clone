@@ -1,6 +1,6 @@
-# [Reddit-Hackernews-ProductHunt Clone on Rails](https://www.blairanderson.co/rails-hackernews-reddit-producthunt-clone/)
+# [Reddit-Hackernews-ProductHunt Clone on Rails](https://blairanderson.github.io/rails-hackernews-reddit-producthunt-clone/)
 
-Maintained by [Blair Anderson](https://www.blairanderson.co/)
+Maintained by [Blair Anderson - Amazon Consultant](https://www.blairanderson.co/)
 
 [![Open Source Helpers](https://www.codetriage.com/blairanderson/rails-hackernews-reddit-producthunt-clone/badges/users.svg)](https://www.codetriage.com/blairanderson/rails-hackernews-reddit-producthunt-clone)
 
